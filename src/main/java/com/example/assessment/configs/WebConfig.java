@@ -16,7 +16,7 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowedOrigins("*") // Update allowed origins as per your requirements
-                .allowedMethods("POST", "OPTIONS","GET")
+                .allowedMethods("POST", "OPTIONS","GET","PUT","DELETE")
                 .allowedHeaders("Authorization", "Content-Type", "Accept");
     }
 
