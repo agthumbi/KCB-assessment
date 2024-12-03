@@ -36,6 +36,7 @@ public class ProjectService {
                 projectRepo.save(project);
                 baseResponse.setResponseCode(0);
                 baseResponse.setResponseMessage("Successfully Created " + project.getName());
+                return ResponseEntity.ok().body(baseResponse);
             }
         } catch (Exception ex) {
             baseResponse.setResponseCode(1);

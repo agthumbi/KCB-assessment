@@ -2,6 +2,8 @@ package com.example.assessment.controller;
 
 import com.example.assessment.models.Task;
 import com.example.assessment.services.TasksService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import jakarta.validation.Path;
@@ -18,14 +20,17 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/v1/tasks")
 @AllArgsConstructor
+@Tag(name = "Tasks", description = "Endpoints for managing tasks")
 public class TasksController {
     protected final TasksService tasksService;
     @PutMapping("/{taskid}")
+    @Operation(summary = "Update a task’s details", description = "Update a task’s details by providing its details.")
     public ResponseEntity<?> getUpdatTaskDetails(@RequestBody Task task,@PathVariable("taskid") Long taskid){
         return tasksService.getUpdatTaskDetails(task,taskid);
 
     }
     @DeleteMapping("/{taskid}")
+    @Operation(summary = "Delete a task", description = "Delete a task by providing its details.")
     public ResponseEntity<?> getDeleteTask(@PathVariable("taskid") Long taskid){
         return tasksService.getDeleteTask(taskid);
 
