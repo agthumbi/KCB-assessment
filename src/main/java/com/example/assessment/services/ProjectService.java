@@ -5,15 +5,13 @@ import com.example.assessment.models.Project;
 import com.example.assessment.models.Task;
 import com.example.assessment.repos.ProjectRepo;
 import com.example.assessment.repos.TaskRepo;
-import com.example.assessment.utils.Generic;
+
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+
 
 import java.util.List;
 import java.util.Optional;
