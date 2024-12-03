@@ -1,4 +1,7 @@
 spring:
+  application:
+    name: assessment
+    author: Thumbi
   datasource:
     url: jdbc:h2:mem:assessdb
     driver-class-name: org.h2.Driver
